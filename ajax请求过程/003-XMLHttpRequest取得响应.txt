@@ -1,0 +1,44 @@
+XMLHttpRequest取得响应；
+
+responseText 获得字符串形式的响应数据；
+
+responseXML 获得XML形式的响应数据；
+
+status和statusText 以数字和文本形式返回HTTP状态码
+
+getAllResponseHeader(); 获取所有的响应头
+
+getResponseHeader(); 查询响应中的某个字段的值
+
+
+readyState 返回HTTP请求的当前状态
+
+状态 对应的情况
+0 请求未初始化，xhr.open() 还没有调用；
+1 与服务器的连接已建立，xhr.open() 已调用；
+2 请求已接收，即接收到请求头信息；
+3 请求处理中，即接收到响应主体；
+4 请求已完成，且响应已就绪，即响应已经完成；
+
+
+监听HTTP的响应过程
+var xhr;
+if(window.XMLHttpRequeset){
+  xhr = new XMLHttpRequest();
+}else{
+  xhr = new ActiveXObject("Microsoft.XMLHTTP");
+};
+
+xhr.open("GET", "get.php", true);
+xhr.send();
+
+xhr.onreadystatechange = function (){
+  if(xhr.readyState === 4 && xhr.status === 200){
+    //请求完成后执行的事件
+  }else{
+    //请求失败后执行的事件
+  };
+};
+
+
+

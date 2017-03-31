@@ -1,0 +1,33 @@
+XMLHttpRequest发送请求；
+
+//open(); 发送前的准备
+xhr.open(method, url, async);
+
+这三个参数的意思：
+method 表示发送请求的方式"GET"或"POST"；
+url 请求地址；
+async 请求是 同步/false 还是 异步/trye；
+
+
+//send(); 将请求送往服务器
+xhr.send(string); 
+请求方式是GET，可以不回参数；
+如果请求方式是POST，要加参数；
+
+
+eg1:
+xhr.open("GET", "get.php", "true");
+xhr.send();
+
+
+eg2:
+xhr.open("POST", "get.php", "true");
+
+//设置请求头信息
+//告诉服务器 发送的数据是表单
+xhr.setRequestHeader("Content-type", "application/x-www-form-urlencoded");
+xhr.send("name=赵小小&gender=女");
+
+
+
+

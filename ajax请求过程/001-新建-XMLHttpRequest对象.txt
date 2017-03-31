@@ -1,0 +1,7 @@
+//新建XMLHttpRequest对象
+var xhr;
+if(window.XMLHttpRequest){
+  xhr = new XMLHttpRequest(); //标准浏览器
+}else{
+  xhr = new ActiveXObject("Microsoft.XMLHTTP");  //IE6
+};
