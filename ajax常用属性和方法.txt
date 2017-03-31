@@ -1,0 +1,32 @@
+XmlHttpRequest的属性：
+
+onreadystatechange: 每个状态改变时都会触发这个事件处理器，通常指向一个JavaScript函数;
+
+readyState: 请求的状态。有5个可取值：0=未初始化，1=正在加载，2=已加载，3=交互中，4=完成;
+
+responseText: 服务器的响应，表示为一个串;
+
+responseXML: 服务器的响应，表示为XML。这个对象可以解析为一个DOM对象;
+
+status: 服务器的HTTP状态码（200对应OK，404表示Not Found(未找到)，等等);
+
+statusText: HTTP状态码的相应文本(OK或Not Found等等).
+
+
+
+
+
+
+XmlHttpRequest的方法：
+
+abort(): 停止当前请求;
+
+getAllResponseHeaders(): 把HTTP请求的所有响应作为键/值对返回;
+
+getResponseHeader("header"): 返回指定首部的串值;
+
+open(method, url): 建立对服务器的调用。method参数可以是GET, POST或PUT。 url参数可以是相对的或者绝对的URL。该方法还包括3个可选参数;
+
+send(content): 向服务器发送请求;
+
+setRequestHeader(header, value): 把指定首部设置为所提供的值。在设置任何首部之前必须先调用open().
